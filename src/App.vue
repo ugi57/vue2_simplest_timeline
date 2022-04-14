@@ -1,28 +1,68 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="timeline">
+    <TimelineTime>2022</TimelineTime>
+    <TimelineTitle>这里是标题</TimelineTitle>
+    <TimelineItem>这里是内容</TimelineItem>
+    <TimelineTitle>这里是标题sssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</TimelineTitle>
+    <TimelineItem>这里是内容ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</TimelineItem>
+    <TimelineTime>2021</TimelineTime>
+    <TimelineTitle>这里是标题</TimelineTitle>
+    <TimelineItem>这里是内容</TimelineItem>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
+import TimelineTime from './components/TimelineTime'
+import TimelineTitle from './components/TimelineTitle'
+import TimelineItem from './components/TimelineItem'
+
+export default { 
   components: {
-    HelloWorld
+    TimelineTime,TimelineTitle,TimelineItem
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin:0;
+  padding:0;
+  }
+
+.timeline{
+  padding:30px;
+}
+
+.timeline_time{
+  font-weight:bold;
+  text-align:left;
+  font-size:20px;
+  color:rgb(100, 100, 100);
+}
+
+.timeline_title{
+  font-weight:bold;
+  text-align:left;
+  display:block;
+  width:20%;
+  margin:20px 0 10px 30px;
+  color:rgb(100, 100, 100);
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.timeline_content{
+  text-align:left;
+  display: block;
+  margin:10px 0 20px 30px;
+  height:70%;
+  font-size:14px;
+  color:rgb(100, 100, 100);
+  width:30%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 </style>
